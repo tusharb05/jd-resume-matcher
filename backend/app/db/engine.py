@@ -11,8 +11,8 @@ DATABASE_URL = os.getenv("DATABASE_URL", "postgresql+psycopg://postgres:postgres
 
 engine = create_engine(
     DATABASE_URL,
-    echo=False,           # turn True if you enjoy SQL spam in logs
-    pool_pre_ping=True,   # prevents stale connections
+    echo=False,           
+    pool_pre_ping=True,   
 )
 
 
