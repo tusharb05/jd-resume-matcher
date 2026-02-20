@@ -1,0 +1,107 @@
+@import "tailwindcss";
+
+/* ---- Theme Tokens (replaces theme.extend) ---- */
+@theme {
+  /* Colors */
+  --color-paper: #FFFEFA;
+  --color-ink: #0B1220;
+
+  --color-brand-50: #ECFFFB;
+  --color-brand-100: #C8FFF3;
+  --color-brand-200: #8DFFE4;
+  --color-brand-300: #4FFFD4;
+  --color-brand-400: #18FBC4;
+  --color-brand-500: #00E6B3;
+  --color-brand-600: #00B58D;
+  --color-brand-700: #007D63;
+  --color-brand-800: #005848;
+  --color-brand-900: #00382F;
+
+  --color-electric-500: #2B7CFF;
+  --color-electric-600: #1F5BFF;
+
+  /* Shadow */
+  --shadow-neon: 0 0 0 1px rgba(0,230,179,0.35),
+                 0 10px 30px rgba(0,0,0,0.08);
+}
+
+/* ---- Animations (same as before, just CSS now) ---- */
+@keyframes slideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(14px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Utility classes (replaces animation config) */
+@layer utilities {
+  .animate-slideUp {
+    animation: slideUp 420ms ease-out;
+  }
+
+  .animate-slideInRight {
+    animation: slideInRight 420ms ease-out;
+  }
+
+  .shadow-neon {
+    box-shadow: var(--shadow-neon);
+  }
+}
+
+
+/* ============================================================= */
+/* ============================================================= */
+/* ============================================================= */
+/* ============================================================= */
+/* ============================================================= */
+/* ============================================================= */
+/* ============================================================= */
+/* ============================================================= */
+
+/* ---- Base layout ---- */
+:root {
+  color-scheme: light;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+
+  /* Use the theme variables instead of theme() */
+  background-color: var(--color-paper);
+  color: var(--color-ink);
+
+  /* spaced dotted background */
+  background-image:
+    radial-gradient(rgba(11, 18, 32, 0.08) 1px, transparent 1px);
+  background-size: 26px 26px;
+  background-position: 0 0;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Text selection styling */
+::selection {
+  background: color-mix(in srgb, var(--color-brand-500) 25%, transparent);
+}

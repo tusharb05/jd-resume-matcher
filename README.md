@@ -163,17 +163,3 @@ This ensures the suggestion layer cannot override the computed skill gap logic.
 
 - `/api/analyze` requires:  
   `Authorization: Bearer <JWT_TOKEN>`
-
----
-
-## Request/Response Formats
-
-### Login Response
-
-```json
-{
-  "success": true,
-  "user": { "id": 2, "email": "test2@test.com" },
-  "token": "JWT_TOKEN_HERE"
-}
-```

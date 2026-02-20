@@ -1,0 +1,5 @@
+import os
+
+from dotenv import load_dotenv
+
+DATABASE_URL = os.getenv("DATABASE_URL", "postgresql+asyncpg://postgres:postgres@localhost:5432/jd_matcher")

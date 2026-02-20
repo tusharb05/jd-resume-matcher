@@ -1,0 +1,15 @@
+[project]
+name = "jd-resume-analyzer"
+version = "0.1.0"
+requires-python = ">=3.10"
+
+dependencies = [
+    "openai",
+    "openai-agents",
+    "pdfplumber",
+    "pypdf",
+    "python-dotenv",
+    "pydantic",
+    "fastapi>=0.129.0",
+    "uvicorn[standard]>=0.40.0",
+]
