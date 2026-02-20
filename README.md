@@ -15,10 +15,6 @@ A backend-focused AI system that analyzes a candidate’s resume against a speci
   - [Orchestration Flow](#orchestration-flow)
 - [Tech Stack](#tech-stack)
 - [API Endpoints](#api-endpoints)
-- [Request/Response Formats](#requestresponse-formats)
-  - [Login Response](#login-response)
-  - [Signup Response](#signup-response)
-  - [Analyze Response](#analyze-response)
 
 ---
 
